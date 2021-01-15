@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visitor's Hub</title>
+    <style>
+        .body {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -40px;
+            bottom: -40px;
+            width: auto;
+            height: auto;
+            background-image: url('https://ak.picdn.net/shutterstock/videos/21530932/thumb/1.jpg?ip=x480');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+
+        .grad {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -40px;
+            bottom: -40px;
+            width: auto;
+            height: auto;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+            /*
+Chrome,Safari4+ */
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        .header {
+            position: absolute;
+            top: calc(50% - 125px);
+            left: calc(50% - 375px);
+            z-index: 2;
+        }
+
+        .header div {
+            float: left;
+            color: #d15b00;
+            font-family: 'Exo', sans-serif;
+            font-size: 35px;
+            font-weight: 200;
+        }
+
+        .header div span {
+            color: #fff!important;
+        }
+
+        button {
+      font-size: 1.0em;
+      margin-right:1em;
+      border:0px;
+      cursor: pointer;
+     background-color: #FFDAD9		;
+  }
+  button:focus {
+      outline: 0px;
+  }
+    </style>
+</head>
+<body>
+    <div class="body"></div>
+    <div class="grad"></div>
+    <div class="header">
+        <div>
+            <h1>Visitor's<span> Hub</span></h1>
+            <a href="login.html">
+                <button id="adminLoginBtn"  >Click Here For Admin Login </button>
+            </a>
+            <a href="UserLogin.html">
+                <button id="userLoginBtn" >Click Here For User Login</button>
+            </a>
+
+        </div>
+    </div><br>
+
+</body>
+</html>

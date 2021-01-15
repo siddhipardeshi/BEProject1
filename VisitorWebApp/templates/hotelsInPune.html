@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* The grid: Three equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 50px;
+            text-align: center;
+            font-size: 25px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .containerTab {
+            padding: 20px;
+            color: black;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Closable button inside the container tab */
+        
+        .closebtn {
+            float: right;
+            color: black;
+            font-size: 35px;
+            cursor: pointer;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            display: inline-table;
+            height: 300px;
+        }
+        
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+        
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        
+        .card button:hover {
+            opacity: 0.7;
+        }
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+        
+        .row1 {
+            display: flex;
+        }
+        /* Create three equal columns that sits next to each other */
+        
+        .column1 {
+            flex: 33.33%;
+            padding: 5px;
+        }
+        
+        h2 {
+            font-size: 40px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+    <div style="text-align:center">
+        <h2><i class="fas fa-hotel"></i> Hotels In Pune</h2>
+    </div>
+    <hr>
+    <!-- Three columns -->
+    <div class="row">
+        <div class="card" onclick="openTab('Orchid');">
+            <img src="https://cf.bstatic.com/images/hotel/max1024x768/203/203742984.jpg" alt="Orchid" style="width:100%">
+            <h1>Orchid Hotel Hinjewadi Pune</h1>
+            <p class="price"> Rs 4,098</p>
+            <p>Located 17 km from the historic Aga Khan Palace,The Orchid offers guests a 24-hour front desk with a host of food.</p>
+            <p><button>Book</button></p>
+        </div>
+        <div class="card" onclick="openTab('Novotel');">
+            <img src="https://cf.bstatic.com/images/hotel/max1024x768/252/252004905.jpg" alt="Novotel" style="width:100%">
+            <h1>Novotel Pune </h1>
+            <p class="price"> Rs 5,098</p>
+            <p>At Novotel Pune you will find a well-equipped business centre and banqueting facilities. Other facilities offered include a safety deposit, luggage storage and dry cleaning.</p>
+            <p><button>Book</button></p>
+        </div>
+        <div class="card" onclick="openTab('Conrad');">
+            <img src="https://cf.bstatic.com/images/hotel/max1024x768/646/64605386.jpg" alt="Conrad" style="width:100%">
+            <h1>Conrad Pune Koregaon Park </h1>
+            <p class="price"> Rs 3,998</p>
+            <p>Featuring 6 dining options, an outdoor temperature controlled swimming pool and 24- hour fitness centre.</p>
+            <p><button>Book</button></p>
+        </div>
+        <div class="card" onclick="openTab('Courtyard');">
+            <img src="https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/partnerimages/37/25/372566826.jpeg" alt="Marriott" style="width:100%">
+            <h1>Courtyard by Marriott Pune</h1>
+            <p class="price"> Rs 6,908</p>
+            <p>The eco-friendly Courtyard by Marriott Pune Chakan takes pride in its modern fitness centre,24-hour restaurant.</p>
+            <p><button>Book</button></p>
+        </div>
+
+    </div>
+
+    <!-- Full-width columns: (hidden by default) -->
+    <div id="Orchid" class="containerTab" style="display:none;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <div class="row1">
+            <div class="column1">
+                <img src="https://r1imghtlak.mmtcdn.com/6e93b062634711e9a66b0242ac110003.jpg" alt="Snow" style="width:100%">
+            </div>
+            <div class="column1">
+                <img src="https://ik.imagekit.io/tvlk/apr-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/hotels/5000000/4540000/4532900/4532832/167d4783_z.jpg?tr=q-40,c-at_max,w-740,h-500&_src=imagekit" alt="Mountains" style="width:100%">
+            </div>
+        </div>
+        <h2>About Courtyard by Marriott Pune Chakan</h2>
+        <p>Situated in Chakan’s industrial area, on the northern outskirts of Pune, the eco-friendly Courtyard by Marriott Pune Chakan takes pride in its modern fitness centre, outdoor lap pool, 24-hour restaurant, and outdoor/indoor game zones. Furnished
+            with featherbed mattresses, the upscale rooms are fully air-conditioned. Standard amenities include satellite TVs, safes, fridges, iPod docks, ergonomic desks, and free signature toiletries. Suites with separate living areas and pet-friendly
+            rooms are also available. Courtyard by Marriott Pune Chakan features a business centre, a conference hall, and an outdoor event space.</p>
+        <h2>Top amenities</h2>
+        <p><i class="fas fa-wifi"></i> Free Wifi
+            <i class="fas fa-swimming-pool"></i> Swimming pool
+            <i class="fas fa-parking"></i> Parking
+            <i class="fas fa-utensils"></i> Restaurant
+            <i class="fas fa-snowflake"></i> A/C
+        </p>
+        <h2>Reviews</h2>
+    </div>
+
+    <div id="Novotel" class="containerTab" style="display:none;background:white">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <div class="row1">
+            <div class="column1">
+                <img src="https://cf.bstatic.com/images/hotel/max1024x768/111/111693652.jpg" alt="Snow" style="width:100%">
+            </div>
+            <div class="column1">
+                <img src="https://www.chalethotels.com/wp-content/uploads/2020/02/2.jpg" alt="Mountains" style="width:100%">
+            </div>
+        </div>
+        <h2>About Novotel Pune </h2>
+        <p>Featuring an open-air swimming pool, a fitness centre and a Kid’s play corner with Xbox 360, Kapla set and Play Table, Novotel Pune is located in Pune. It is just an 8-minute drive from the Pune Airport and 850 m from the Phoenix Market City.
+            Free WiFi access is available. The property offers free parking. Shirdi is 3.5 hours away from the property. Air-conditioned rooms here will provide you with a flat-screen satellite TV and a seating area. It also has a minibar and tea/coffee
+            maker.
+            <br> Featuring a shower, private bathrooms also come with free toiletries and slippers. The well-known Aga Khan Palace is a 4-minute drive. Yerwada and Pune Golf Club are 3.4 km away while the property is 7.4 km from Museum of Arthopod. EON
+            IT Park Kharadi is 7.4 km, Magarpatta is 8.3 km, Shaniwar Wada is 8.3 km and Kelkar Museum is 10 km away. The Pune Railway Station is 8 km from Novotel Pune Nagar Road. Osho International at Koregaon Park is just 20 minutes’ drive.</p>
+        <h2>Top amenities</h2>
+        <p><i class="fas fa-wifi"></i> Free Wifi
+            <i class="fas fa-swimming-pool"></i> Swimming pool
+            <i class="fas fa-parking"></i> Parking
+            <i class="fas fa-utensils"></i> Restaurant
+            <i class="fas fa-snowflake"></i> A/C
+        </p>
+        <h2>Reviews</h2>
+    </div>
+
+    <div id="Conrad" class="containerTab" style="display:none;background:white">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <div class="row1">
+            <div class="column1">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/0c/e0/db/pool.jpg?w=900&h=-1&s=1" alt="Snow" style="width:100%">
+            </div>
+            <div class="column1">
+                <img src="https://www.conradpune.com/images/home-slider/Stay/Deluxe-Room.jpg" alt="Mountains" style="width:100%">
+            </div>
+        </div>
+        <h2>About Conrad Pune Koregaon Park </h2>
+        <p>Featuring 6 dining options, an outdoor temperature controlled swimming pool and 24- hour fitness centre, Conrad Pune - Luxury by Hilton offers accommodation in Pune. Guests can enjoy a drink at the on-site bar.<br> Every room features a 42-inch
+            HDTV, a coffee machine and a marble bathroom with walk-in rain shower.<br> You will find a 24-hour front desk and business centre. For your comfort the property offers an on-site salon and spa. Guests can recharge with a quick bite and a refreshing
+            cup of tea or coffee at Pune Sugar Box or enjoy Indian, Asian and Mediterranean food at Coriander kitchen. Zeera is the Indian fine dining restaurant while Koji offers a taste of Asian cuisine including Japanese and Thai.
+        </p>
+        <h2>Top amenities</h2>
+        <p><i class="fas fa-wifi"></i> Free Wifi
+            <i class="fas fa-swimming-pool"></i> Swimming pool
+            <i class="fas fa-parking"></i> Parking
+            <i class="fas fa-utensils"></i> Restaurant
+            <i class="fas fa-snowflake"></i> A/C
+        </p>
+        <h2>Reviews</h2>
+    </div>
+    <div id="Courtyard" class="containerTab" style="display:none;background:white">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <div class="row1">
+            <div class="column1">
+                <img src="https://cf.bstatic.com/images/hotel/max1024x768/145/145466712.jpg" alt="Snow" style="width:100%">
+            </div>
+            <div class="column1">
+                <img src="https://cf.bstatic.com/images/hotel/max1024x768/145/145485890.jpg" alt="Mountains" style="width:100%">
+            </div>
+        </div>
+        <h2>About Courtyard by Marriott Pune </h2>
+        <p>Courtyard Marriott is located off the Mumbai-Pune Expressway, 500 m from the Rajiv Gandhi Infotech Park. It features an outdoor pool, a well-equipped gym and offers free private parking.<br> The air-conditioned guest rooms of the Courtyard Marriott
+            Pune Hinjewadi are equipped with cable TV channels and a work desk. They include extensive bathrooms with hairdryer, bathrobe and slippers.<br> Local specialties and some international classics are served at Momo's Cafe. The restaurant also
+            features MOMO 2 Go and Ignite - Bar and Grill. 24-hour room service is available, facilities for disabled guests, express check-in, check-out, luggage storage.
+
+
+        </p>
+        <h2>Top amenities</h2>
+        <p><i class="fas fa-wifi"></i> Free Wifi
+            <i class="fas fa-swimming-pool"></i> Swimming pool
+            <i class="fas fa-parking"></i> Parking
+            <i class="fas fa-utensils"></i> Restaurant
+            <i class="fas fa-snowflake"></i> A/C
+        </p>
+        <h2>Reviews</h2>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
